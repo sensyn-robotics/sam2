@@ -1,6 +1,34 @@
+[project]
+name = "sam2"
+version = "2.1.1"
+description = "support uv virtual environemnt"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cython>=3.0.11",
+    "hydra-core>=1.3.2",
+    "iopath>=0.1.10",
+    "numpy>=2.1.3",
+    "pip>=24.3.1",
+    "torch>=2.3.1",
+    "torchaudio>=2.5.0",
+    "torchvision>=0.20.0",
+    "tqdm>=4.67.1",
+]
+license = { text = "Apache 2.0" }
+
 [build-system]
 requires = [
     "setuptools>=61.0",  
     "torch>=2.3.1",
-    ]
+]
 build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+    "ipython>=8.30.0",
+    "matplotlib>=3.9.3",
+    "nbstripout>=0.8.1",
+    "opencv-python>=4.10.0.84",
+]

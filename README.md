@@ -38,6 +38,14 @@ To use the SAM 2 predictor and run the example notebooks, `jupyter` and `matplot
 pip install -e ".[notebooks]"
 ```
 
+If you use uv as a virtual environment handler, you can run as below instead of above method.
+```bash
+uv sync
+source .venv/bin/activate
+pip install -e .
+pip install -e ".[notebooks]"
+```
+
 Note:
 1. It's recommended to create a new Python environment via [Anaconda](https://www.anaconda.com/) for this installation and install PyTorch 2.3.1 (or higher) via `pip` following https://pytorch.org/. If you have a PyTorch version lower than 2.3.1 in your current environment, the installation command above will try to upgrade it to the latest PyTorch version using `pip`.
 2. The step above requires compiling a custom CUDA kernel with the `nvcc` compiler. If it isn't already available on your machine, please install the [CUDA toolkits](https://developer.nvidia.com/cuda-toolkit-archive) with a version that matches your PyTorch CUDA version.
